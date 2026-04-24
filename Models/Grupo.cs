@@ -7,24 +7,22 @@ public class Grupo
     public Grupo(Dictionary<int, Integrante> integrantes)
     {
         this.Integrantes = integrantes;
+         CargaDatosManual();
     }
 
     public void CargaDatosManual()
     {
-        int dni = 49757661;
-        string nombre = "lenny";
-        DateTime fechaNacimiento = new DateTime(2009, 8, 10);
+       
 
-        string foto = "foto.jpg";
-        List<string> familiares = new List<string> { "padre", "madre" };
-        List<string> intereses = new List<string> { "futbol", "musica" };
-
-        Integrante nuevo = new Integrante(dni, nombre, fechaNacimiento, foto, familiares, intereses);
-
-        Integrantes.Add(dni, nuevo);
+        Integrante lenny = new Integrante( 49757661,"lenny",new DateTime(2009, 8, 10),"foto.jpg",new List<string> { "padre", "madre" },new List<string> { "futbol", "musica" });
+        Integrante tarsi = new Integrante(50154645,"tarsi",new DateTime(2010, 2, 20),"foto.jpg",new List<string> { },new List<string> { "futbol", "deporte" });      
+        Integrantes.Add(49757661, lenny);
+        Integrantes.Add(50154645, tarsi);
     }
-    public Dictionary<int, Integrante> DevolverIntegrantes(){
-        return integrantes;
+
+    public Dictionary<int, Integrante> DevolverIntegrantes()
+    {
+        return Integrantes;
     }
     
     public Integrante GetIntegrante(int dni){
