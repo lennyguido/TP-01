@@ -19,7 +19,7 @@ public class HomeController : Controller
         ViewBag.Integrantes = grupo.DevolverIntegrantes();
         return View();
     }
-    IActionResult SelectIntegrante(int dni)
+     public IActionResult SelectIntegrante(int dni)
     {
         Grupo grupo = new Grupo();
 

@@ -3,6 +3,12 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @foreach(var integrante in ViewBag.Integrantes.Values)
+    {
+      <ul>
+      <li>hola</li>
+        </ul>
+ <a href="/Home/SelectIntegrante?dni=@integrante.GetDNI()">@integrante.GetNombre()</a>
+    }
+     
 </div>

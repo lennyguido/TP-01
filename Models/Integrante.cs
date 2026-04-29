@@ -18,4 +18,33 @@ public class Integrante
         this.familiares = familiares;
         this.intereses = intereses;
     }
+    public int GetDNI()
+{
+    return dni;
+}
+
+public string GetNombre()
+{
+    return nombre;
+}
+
+public DateTime GetFechaNacimiento()
+{
+    return fechaNacimiento;
+}
+
+public string GetFoto()
+{
+    return foto;
+}
+
+public List<string> GetFamiliares()
+{
+    return familiares;
+}
+
+public List<string> GetIntereses()
+{
+    return intereses;
+}
 }
