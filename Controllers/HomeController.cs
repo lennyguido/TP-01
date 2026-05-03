@@ -26,7 +26,7 @@ public class HomeController : Controller
     Integrante integrante = grupo.GetIntegrante(dni);
 
     ViewBag.Integrante = integrante;
-    ViewBag.DNI = dni;
+    
 
     return View("infoIntegrante");
     }

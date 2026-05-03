@@ -1,0 +1,33 @@
+@{
+    Integrante integrante = ViewBag.Integrante;
+}
+<div style="text-align:center; border: 1px solid black;;">
+
+    <h1>@integrante.GetNombre()</h1>
+
+    <img src="@integrante.GetFoto()" width="180" />
+
+    <h5>DNI: @integrante.GetDNI()</h5>
+    <h5>Fecha: @integrante.GetFechaNacimiento().ToShortDateString()</h5>
+
+    <h3>Familiares:</h3>
+    <ul style="list-style: none; padding: 0;">
+    @foreach(string f in integrante.GetFamiliares())
+    {
+        <li>@f</li>
+    }
+    </ul>
+
+    <h3>Intereses:</h3>
+    <ul style="list-style: none; padding: 0;">
+    @foreach(string i in integrante.GetIntereses())
+    {
+        <li>@i</li>
+    }
+    </ul>
+
+    <br>
+
+    <a href="@Url.Action("Index", "Home")">Volver</a>
+
+</div>
